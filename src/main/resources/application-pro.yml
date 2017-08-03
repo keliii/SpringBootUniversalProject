@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  #------------ database ------------
+  datasource:
+    username: root
+    password: rootPW13@keliii
+    url: jdbc:mysql://localhost:3306/jadmin
+  #------------ REDIS (RedisProperties) ------------
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+  #------------ AMQ config ------------
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    user: admin
+    password: admin

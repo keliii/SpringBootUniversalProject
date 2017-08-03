@@ -1,0 +1,12 @@
+本工程旨在编写通用的可复用的模块，以便今后的高效开发，以及知识的回顾。
+
+#TODO 文件上传，下载，断点续传
+
+#TODO 图片压缩
+
+#TODO FastDFS
+
+#TODO jboss
+
+#TODO dubbo/spring cloud
+

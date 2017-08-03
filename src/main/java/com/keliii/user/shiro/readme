@@ -1,0 +1,4 @@
+shiro权限将自动匹配controller
+在方法上使用@Permission(isPublic = true)设置该URL为开放URL
+
+运行时修改ControllerUrl内容时，应将state置为>0来锁定配置，以免下次启动时因代码配置而覆盖
