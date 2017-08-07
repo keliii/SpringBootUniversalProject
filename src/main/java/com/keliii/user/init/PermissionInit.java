@@ -5,18 +5,13 @@ import com.keliii.user.annotation.Permission;
 import com.keliii.user.domain.RequestToMethodItem;
 import com.keliii.user.domain.ShiroUrlFilter;
 import com.keliii.user.entity.ControllerUrl;
-import com.keliii.user.service.PermissionService;
 import com.keliii.user.shiro.MShiroFilterFactoryBean;
 import com.keliii.user.shiro.ShiroUtil;
 import com.keliii.user.shiro.interfaces.BasePermissionService;
-import netscape.security.Privilege;
-import org.apache.shiro.web.filter.mgt.*;
-import org.apache.shiro.web.servlet.AbstractShiroFilter;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -30,7 +25,10 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by keliii on 2017/6/21.

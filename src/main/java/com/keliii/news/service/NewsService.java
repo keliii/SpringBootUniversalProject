@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
+ * redis示例
  * Created by keliii on 2017/6/26.
  */
 @Service

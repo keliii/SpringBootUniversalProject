@@ -13,7 +13,7 @@ public class UniversalApplication {
 	}
 
 }
-//使用war包时重写SpringApplicationBuilder
+//使用war包时重写configure
 //public class UniversalApplication extends SpringBootServletInitializer {
 //
 //	@Override

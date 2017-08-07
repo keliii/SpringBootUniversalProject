@@ -23,6 +23,11 @@ import java.lang.reflect.Method;
 @Configuration
 //@EnableCaching
 public class RedisConfig {
+
+    /**
+     * key生成器，当没有指定key时，使用该方法生成key
+     * @return
+     */
     @Bean
     public KeyGenerator wiselyKeyGenerator() {
         return new KeyGenerator() {

@@ -1,6 +1,5 @@
 package com.keliii.user.init;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
