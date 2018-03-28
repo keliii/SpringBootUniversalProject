@@ -43,7 +43,8 @@ spring:
       naming:
         strategy: org.hibernate.cfg.ImprovedNamingStrategy
     #dialect
-    database-platform: org.hibernate.dialect.MySQL5Dialect
+#    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   #------------ redis config ------------
   redis:
     pool:
@@ -53,7 +54,7 @@ spring:
       max-wait: -1
       # 连接池中的最大空闲连接
       max-idle: 8
-      # 连接池中的最小空闲连接
+      # 连接池中的最小空闲连接w
       min-idle: 0
     # 连接超时时间（毫秒
     timeout: 0

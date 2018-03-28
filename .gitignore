@@ -1,6 +1,10 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
+
+### Mac File ###
+.DS_Store
+
 ### STS ###
 .apt_generated
 .classpath

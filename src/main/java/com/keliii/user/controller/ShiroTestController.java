@@ -54,7 +54,7 @@ public class ShiroTestController {
 
     @SuppressWarnings("SpringJavaAutowiringInspection")
     @Autowired
-    private MShiroFilterFactoryBean shiroFilterFactoryBean;
+    private ShiroFilterFactoryBean shiroFilterFactoryBean;
 
     @RequestMapping("/login")
     @Permission(isPublic = true)

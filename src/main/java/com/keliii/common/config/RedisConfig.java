@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +23,7 @@ import java.lang.reflect.Method;
  */
 @Configuration
 //@EnableCaching
-public class RedisConfig {
+public class RedisConfig extends CachingConfigurerSupport {
 
     /**
      * key生成器，当没有指定key时，使用该方法生成key
@@ -50,12 +51,17 @@ public class RedisConfig {
     @Bean
     public CacheManager cacheManager(@SuppressWarnings("rawtypes") RedisTemplate redisTemplate) {
         RedisCacheManager redisCacheManager = new RedisCacheManager(redisTemplate);
+        /* //设置缓存过期时间
+        // redisCacheManager.setDefaultExpiration(60);//秒
+        //设置value的过期时间
+        Map<String,Long> map=new HashMap();
+        map.put("test",60L);
+        redisCacheManager.setExpires(map);*/
         return redisCacheManager;
     }
 
     @Bean
-    public RedisTemplate<String, String> redisTemplate(
-            RedisConnectionFactory factory) {
+    public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
         StringRedisTemplate template = new StringRedisTemplate(factory);
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
         ObjectMapper om = new ObjectMapper();
